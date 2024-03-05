@@ -1,10 +1,12 @@
+-- Crear la base de datos si no existe
 CREATE DATABASE IF NOT EXISTS companydb;
 
-USE companydb;
+-- Conectar a la base de datos
+\c companydb;
 
+-- Crear la tabla
 CREATE TABLE employee (
-	id INT(11) NOT NULL AUTO_INCREMENT,
-    name VARCHAR(45) DEFAULT NULL,
-    salary INT(5) DEFAULT NULL,
-    PRIMARY KEY (id)
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(45),
+    salary INT
 );
